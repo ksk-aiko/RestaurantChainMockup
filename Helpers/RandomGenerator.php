@@ -63,7 +63,7 @@ class RandomGenerator {
             'name' => $city . ' ' . $faker->randomElement(['Branch', 'Store', 'Location', 'Outlet']),
             'address' => $faker->streetAddress(),
             'city' => $city,
-            'state' => $faker->prefecture(),
+            'state' => $faker->state(),
             'zipCode' => $faker->postcode(),
             'isOpen' => $faker->boolean(90)
         ];
