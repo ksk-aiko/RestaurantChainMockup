@@ -10,7 +10,8 @@ class RandomGenerator {
     private static array $awards = ['Employee of the Month', 'Best Service Award', 'Excellence in Hospitality', 'Customer Choice Award', 'Top Performer'];
 
     private static function getFaker() {
-        return Factory::create('ja_JP');
+        // use en_US locale for consistency
+        return Factory::create('en_US');
     }
 
     public static function user(): array {
