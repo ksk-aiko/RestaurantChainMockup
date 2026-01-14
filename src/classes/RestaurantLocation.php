@@ -20,7 +20,7 @@ class RestaurantLocation implements FileConvertible {
         $this->zipCode = $data['zipCode'];
         $this->isOpen = $data['isOpen'];
         
-        // ランダムな従業員数（2〜5人）を生成
+        // Generate a random number of employees (2-5) and add them to the array to recreate the restaurant employees
         $employeeCount = rand(2, 5);
         $this->employees = [];
         for ($i = 0; $i < $employeeCount; $i++) {

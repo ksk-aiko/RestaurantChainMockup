@@ -22,7 +22,7 @@ class RestaurantChain extends Company {
         $this->yearFounded = $data['yearFounded'];
         $this->parentCompany = $data['parentCompany'];
         
-        // ランダムな店舗数（2〜5店舗）を生成
+        // Generate a random number of restaurants (2-5) and add them to the array to recreate the restaurant chain
         $locationCount = rand(2, 5);
         $this->restaurantLocations = [];
         for ($i = 0; $i < $locationCount; $i++) {
