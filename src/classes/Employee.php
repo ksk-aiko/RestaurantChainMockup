@@ -2,7 +2,9 @@
 require_once 'User.php';
 require_once __DIR__ . '/../../Helpers/RandomGenerator.php';
 
+// Employee class inheriting from User class
 class Employee extends User {
+    // Add Employee-specific properties
     public string $jobTitle;
     public float $salary;
     public DateTime $startDate;
@@ -15,10 +17,6 @@ class Employee extends User {
         $this->salary = $data['salary'];
         $this->startDate = $data['startDate'];
         $this->awards = $data['awards'];
-    }
-
-    public static function RandomGenerator(): self {
-        return new self();
     }
 
     public function toHTML(): string {

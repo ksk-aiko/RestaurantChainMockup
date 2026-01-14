@@ -14,7 +14,9 @@ class User implements FileConvertible {
     public DateTime $membershipExpirationDate;
     public string $role;
 
+    // create a new user with random data
     public function __construct() {
+        // $data is associative array with user properties
         $data = RandomGenerator::user();
         $this->id = $data['id'];
         $this->firstName = $data['firstName'];
