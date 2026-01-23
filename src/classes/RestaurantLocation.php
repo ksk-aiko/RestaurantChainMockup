@@ -29,11 +29,15 @@ class RestaurantLocation implements FileConvertible {
     }
 
     public function toHTML(): string {
-        $html = "<h3>{$this->name}</h3><ul>";
+        $html = "<h3>{$this->name}</h3><p>{$this->getFullAddress()}</p><ul>";
         foreach ($this->employees as $e) {
             $html .= $e->toHTML();
         }
         return $html . "</ul>";
+    }
+
+    public function getFullAddress(): string {
+        return "{$this->address}, {$this->city}, {$this->state} {$this->zipCode}";
     }
 
     public function toString(): string { return $this->name; }

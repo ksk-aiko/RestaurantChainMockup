@@ -20,6 +20,15 @@ class Employee extends User {
     }
 
     public function toHTML(): string {
-        return "<li>{$this->jobTitle} - {$this->salary} USD</li>";
+        $name = $this->getFullName();
+        return "<li>{$this->jobTitle} - {$name}</li>";
+    }
+
+    public function getFullName(): string {
+        return "{$this->firstName} {$this->lastName}";
+    }
+
+    public function getStartDateFormatted(string $format = 'Y-m-d'): string {
+        return $this->startDate->format($format);
     }
 }
